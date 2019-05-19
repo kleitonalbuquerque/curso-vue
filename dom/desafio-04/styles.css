@@ -13,3 +13,27 @@
 	background-color: gray;
 	width: 50px !important;
 }
+
+.perigo {
+	background-color: red;
+}
+
+.quadrado {
+	width: 100px;
+	height: 100px;
+}
+
+.direita {
+	float: right;
+}
+
+.barra-progresso {
+	height: 30px;
+	width: 700px;
+	border: 1px solid black;
+}
+
+.progresso {
+	background-color: red;
+	height: 100%;
+}
