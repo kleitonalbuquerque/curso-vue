@@ -31,30 +31,33 @@
 
 <div id="app">
   <div class="caixas">
-    <div class="demo" :class="estilo1" @click="aplicarC1 = !aplicarC1"></div>
-    <div class="demo" :class="estilo1"></div>
-    <div class="demo" :class="[classeCSS, {girar: aplicarGirar}]"></div>
+    <div class="demo" :style="{backgroundColor: cor}"></div>
+    <div class="demo" :style="[meuEstilo, {height: altura}]"></div>
+    <div class="demo" :style="[meuEstilo, {height: altura}, {width: largura}]"></div>
   </div>
   <hr>
-  <input type="text" v-model="classeCSS">
+  cor:<input type="text" v-model="cor">
+  largura:<input type="text" v-model="largura">
+  altura:<input type="text" v-model="altura">
 </div>
 
 <script>
   new Vue({
     el: '#app',
     data: {
-      aplicarC1: false,
-      classeCSS: 'c1',
-      aplicarGirar: true
+      cor: 'red',
+      largura: 100,
+      altura: 100
     },
     methods: {
       
     },
     computed: {
-      estilo1() {
+      meuEstilo() {
         return {
-          c1: this.aplicarC1,
-          c2: !this.aplicarC1
+          backgroundColor: this.cor,
+          width: this.largura + 'px',
+          heigth: this.altura + 'px'
         }
       }
     },
