@@ -2,10 +2,10 @@
 
 <div id="desafio">
     <!-- 1) Preencha a tag <p> abaixo com o seu Nome e Idade - usando Interpolação -->
-    <p>Usando VueJS - {{ nome }} ({{ idade }})</p>
+    <p>Usando VueJS - Nome: {{ nome }} - Idade: ({{ idade }})</p>
     
     <!-- 2) Exiba sua idade multiplicada por 3 -->
-    <p>{{ idade * 3 }} {{ triplicaIdade() }}</p>
+    <p>Idade x 3 = {{ idade * 3 }} - Idade triplicada = {{ triplicaIdade() }}</p>
     
     <!-- 3) Chame uma função para exibir um número randomico
         entre 0 and 1 (Math.random()) -->
@@ -22,4 +22,5 @@
         <input type="text" v-bind:value="nome">
     </div>
 </div>
+
 <script src="app.js"></script>

@@ -4,6 +4,7 @@
   <p>{{ contador }}</p>
   <button @click="somar">Somar 1</button>
   <!-- <button v-on:click="contador++">Somar 1</button> -->
+  <button @click="sub">Diminuir 1</button>
   <hr>
   <input type="text" :value="contador">
 </div>
@@ -16,8 +17,10 @@
     },
     methods: {
       somar() {
-        console.log()
         this.contador++
+      },
+      sub() {
+        this.contador--
       }
     }
   })

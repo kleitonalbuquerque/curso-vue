@@ -3,18 +3,35 @@
 <div id="app">
   <input type="text" v-on:input="alterarTitulo">
   <p>{{ titulo }}</p>
+  <!-- Usando @ na diretiva -->
+  <input type="text" @input="alterarTitulo2">
+  <p>{{ titulo2 }}</p>
 </div>
 
 <script>
 new Vue({
   el:'#app',
   data: {
-    titulo: 'Usando VueJS!'
+    titulo: 'Usando VueJS!',
+    titulo2: 'Usando @ na diretiva'
   },
   methods: {
     alterarTitulo(event) {
       this.titulo = event.target.value
+    },
+    alterarTitulo2(e) {
+      this.titulo2 = e.target.value
     }
   },
 })
 </script>
+
+<style scoped>
+  p {
+    background-color: greenyellow;
+    width: 50%;    
+  }
+  div input {
+    width: 50%;
+  }
+</style>

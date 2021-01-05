@@ -3,6 +3,7 @@
 <div id="app">
   <p>{{ contador }}</p>
   <button v-on:click="somar">Somar 1</button>
+  <button v-on:click="sub">Subtrair 1</button>
 </div>
 
 <script>
@@ -12,9 +13,13 @@
       contador: 0
     },
     methods: {
-      somar() {
-        console.log()
+      somar(e) {
+        console.log(e)
         this.contador++
+      },
+      sub(e) {
+        console.log(e)
+        this.contador--
       }
     }
   })
