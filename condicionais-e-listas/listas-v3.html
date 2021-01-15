@@ -11,11 +11,24 @@
         <ul>
             <li v-for="(cor, i) in cores" :teste='cor'> {{ i + 1 }}) {{ cor }} </li>
         </ul>
+
         <hr>
+
         <template v-for="(cor, i) in cores">
             <h1> {{ cor }} </h1>
             <p> {{ i }} </p>
         </template>
+        
+        <hr>
+
+        <ul>
+            <li v-for="pessoa in pessoas" >
+                <!-- {{ pessoa.nome }} -->
+                <span v-for="(valor, chave, index) in pessoa" >
+                    {{ chave }} = {{ valor }} ({{ index + 1 }})
+                </span>
+            </li>
+        </ul>
     </div>
 </body>
 
