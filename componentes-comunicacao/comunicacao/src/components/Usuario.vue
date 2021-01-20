@@ -10,10 +10,9 @@
       <app-usuario-info 
 				:nome="nome"
 				:idade="idade" 
-				:reiniciarFn="reiniciarNome"/>
+				:reiniciarFn="reiniciarNome" />
       <app-usuario-editar 
-				:idade="idade" 
-				@idadeMudou="idade = $event + 1"/>
+				:idade="idade" />
     </div>
   </div>
 </template>
