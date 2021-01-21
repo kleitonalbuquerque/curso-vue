@@ -5,19 +5,19 @@
       <button @click="numero++">&gt;</button>
     </span>
     <Citacao>
-      <h1 slot="autor"> {{ citacoes[indice].autor }} </h1>
-      <p> {{ citacoes[indice].texto }} </p>
-      <h6 slot="fonte"> {{ citacoes[indice].fonte }} </h6>
+      <h1 slot="autor">{{ citacoes[indice].autor }}</h1>
+      <p>{{ citacoes[indice].texto }}</p>
+      <h6 slot="fonte">{{ citacoes[indice].fonte }}</h6>
     </Citacao>
   </div>
 </template>
 
 <script>
-import Citacao from './Citacao.vue'
+import Citacao from "./Citacao.vue";
 
 export default {
   components: {
-    Citacao
+    Citacao,
   },
   data() {
     return {
@@ -25,7 +25,8 @@ export default {
       citacoes: [
         {
           fonte: "Jornal do Empreendedor",
-          texto: "Lembre-se sempre que você é absolutamente único. Assim como todos os outros.",
+          texto:
+            "Lembre-se sempre que você é absolutamente único. Assim como todos os outros.",
           autor: "Margaret Mead",
         },
         {
@@ -44,6 +45,20 @@ export default {
   computed: {
     indice() {
       return Math.abs(this.numero % 3);
+    },
+  },
+  methods: {
+    created() {
+      console.log("created");
+    },
+    destroyed() {
+      console.log("destroyed");
+    },
+    activated() {
+      console.log("activated");
+    },
+    deactivated() {
+      console.log("deactivated");
     },
   },
 };
