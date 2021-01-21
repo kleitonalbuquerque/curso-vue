@@ -3,7 +3,7 @@
     <!-- <slot></slot> -->
     <!-- Passanto slots nomeados -->
     <slot name="autor"></slot>
-    <slot name="texto"></slot>
+    <slot></slot>
     <slot name="fonte"></slot>
   </div>
 </template>
