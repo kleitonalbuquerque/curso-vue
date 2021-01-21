@@ -1,6 +1,10 @@
 <template>
   <div class="citacao">
-    <slot></slot>
+    <!-- <slot></slot> -->
+    <!-- Passanto slots nomeados -->
+    <slot name="autor"></slot>
+    <slot name="texto"></slot>
+    <slot name="fonte"></slot>
   </div>
 </template>
 
