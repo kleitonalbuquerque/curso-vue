@@ -5,13 +5,13 @@
 			<form class="painel">
 				<div class="cabecalho">Formulário</div>
 				<Rotulo nome="E-mail">
-					<input type="text" v-model="usuario.email">
+					<input type="text" v-model.lazy.trim="usuario.email">
 				</Rotulo>
 				<Rotulo nome="Senha">
 					<input type="password" v-model="usuario.senha">
 				</Rotulo>
 				<Rotulo nome="Idade">
-					<input type="number" v-model="usuario.idade">
+					<input type="number" v-model.number="usuario.idade">
 				</Rotulo>
 				<Rotulo nome="Mensagem">
 					<textarea name="" cols="30" rows="5"></textarea>
@@ -45,7 +45,7 @@
 					<span> {{ usuario.senha }} </span>
 				</Rotulo>
 				<Rotulo nome="Idade">
-					<span> {{ usuario.idade }} </span>
+					<span> {{ usuario.idade }} {{ tipoIdade }} </span>
 				</Rotulo>
 				<Rotulo nome="Mensagem">
 					<span>???</span>
@@ -74,6 +74,11 @@ import Escolha from './components/Escolha.vue'
 export default {
 	name: 'app',
 	components: { Rotulo, Escolha },
+	computed: {
+		tipoIdade() {
+			return typeof this.usuario.idade
+		}
+	},
 	data() {
 		return {
 			usuario: {
