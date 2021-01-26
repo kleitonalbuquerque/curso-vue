@@ -1,0 +1,29 @@
+<script src="http://unpkg.com/vue"></script>
+
+<div id="app">
+  <ol>
+    <todo-item 
+      v-for="item in list"
+      :todo="item"
+      :key="item.id"
+    />
+  </ol>
+</div>
+
+<script>
+  Vue.component('todo-item', {
+    props: ['todo'],
+    template: '<li>{{ todo.text }}</li>'
+  })
+
+  var app = new Vue({
+    el: '#app',
+    data: {
+      list: [
+        { id: 0, text: 'Vegetais' },
+        { id: 1, text: 'Queijo' },
+        { id: 2, text: 'Qualquer outra coisa que humanos podem comer' }
+      ]
+    }
+  })
+</script>
