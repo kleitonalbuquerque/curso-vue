@@ -9,7 +9,7 @@
 
     </v-navigation-drawer>
 
-    <app-header />
+    <app-header titulo="Título" descricao="Descrição" />
 
     <app-carousel />
 
